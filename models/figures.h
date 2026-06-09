@@ -1,4 +1,7 @@
 //Tetris figures.
+/*
+    y will be the velocity that the figure will move. That will change depending of the level
+*/
 #include <raylib.h>
 
 class square
@@ -18,13 +21,13 @@ public:
 class line
 {
 public:
-    void draw(int x, int y)
+    void draw(int x, int y, int r1, int r2)
     {
-        DrawRectangle(x,y,80,20,WHITE);
+        DrawRectangle(x,y,r1,r2,WHITE);
         //Vertical lines.
-        DrawLine(x+20,y,x+20,y+20,BLACK);
-        DrawLine(x+40,y,x+40,y+20,BLACK);
-        DrawLine(x+60,y,x+60,y+20,BLACK);
+        //DrawLine(x+20,y,y+20,y+20,BLACK);
+        //DrawLine(x+40,y,x+40,y+20,BLACK);
+        //DrawLine(x+60,y,x+60,y+20,BLACK);
     }
 };
 
